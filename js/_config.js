@@ -5,7 +5,7 @@
 //
 //////////////////////////
 
-if (window.location.host == 'facebookmobileweb.com' || window.location.host == 'www.facebookmobileweb.com') {
+if (window.location.host == 'fbauth.apphb.com' || window.location.host == 'www.fbauth.apphb.com') {
     var gAppID = '321109034670289';
 }
 //Add your Application ID here

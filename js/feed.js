@@ -12,9 +12,9 @@ function publishStory() {
     name: 'I\'m using the Hackbook web app',
     caption: 'Hackbook for Mobile Web.',
     description: 'Check out Hackbook for Mobile Web to learn how you can make your web apps social using Facebook Platform.',
-    link: 'http://localhost:15658/',
-    picture: 'http://localhost:15658/img/facebook_icon_large.png',
-    actions: [{ name: 'Get Started', link: 'http://localhost:15658/' }],
+    link: 'http://fbauth.apphb.com/',
+    picture: 'http://fbauth.apphb.com/img/facebook_icon_large.png',
+    actions: [{ name: 'Get Started', link: 'http://fbauth.apphb.com/' }],
   }, 
   function(response) {
     console.log('publishStory UI response: ', response);
@@ -35,9 +35,9 @@ function publishStoryFriend() {
     name: 'I\'m using the Hackbook web app',
     caption: 'Hackbook for Mobile Web.',
     description: 'Check out Hackbook for Mobile Web to learn how you can make your web apps social using Facebook Platform.',
-    link: 'http://localhost:15658/',
-    picture: 'http://localhost:15658/img/facebook_icon_large.png',
-    actions: [{ name: 'Get Started', link: 'http://localhost:15658/' }],
+    link: 'http://fbauth.apphb.com/',
+    picture: 'http://fbauth.apphb.com/img/facebook_icon_large.png',
+    actions: [{ name: 'Get Started', link: 'http://fbauth.apphb.com/' }],
     user_message_prompt: 'Tell your friends about building social web apps.'
   }, 
   function(response) {
