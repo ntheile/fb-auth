@@ -23,17 +23,6 @@
   
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script>
-
-        (function (d) {
-                var js, id = 'facebook-jssdk';
-                if (d.getElementById(id)) { return; }
-                js = d.createElement('script'); js.id = id; js.async = true;
-                js.src = "//connect.facebook.net/en_US/all.js";
-                d.getElementsByTagName('head')[0].appendChild(js);
-            }(document)
-        );
-    </script>
 
 </head>
 
@@ -308,17 +297,18 @@
       </p>
     </div>
   </div>
- 
+ <div id="data"></div>
  <div id="deviceready"></div>
  
-    <script src="cordova-2.2.0.js"></script>
+   
   <!--<script type="text/javascript" src="js/index.js"></script>-->
+  <script src="cordova-2.1.0.js"></script>
   <!-- cordova facebook plugin -->
   <script src="cdv-plugin-fb-connect.js"></script>
   <!-- facebook js sdk -->
   <script src="facebook_js_sdk.js"></script>
   
- <!-- <script src="js/_config.js"></script>-->
+ <script src="js/_config.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/feed.js"></script>
@@ -329,25 +319,25 @@
   <script>
       // Initialize the Facebook SDK
       // on ready events
-      if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-          document.addEventListener('deviceready', function () {
-              try {
-                  alert('Device is ready! Make sure you set your app_id below this alert.');
-                  FB.init({ appId: "343925279040057", nativeInterface: CDV.FB, useCachedDialogs: false });
-                  document.getElementById('data').innerHTML = "";
-              } catch (e) {
-                  alert(e);
-              }
-          }, false);
-      } else {
+      //if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+          //document.addEventListener('deviceready', function () {
+          //    try {
+          //        alert('Device is ready! Make sure you set your app_id below this alert.');
+          //        FB.init({ appId: "343925279040057", nativeInterface: CDV.FB, useCachedDialogs: false });
+          //        document.getElementById('data').innerHTML = "";
+          //    } catch (e) {
+          //        alert(e);
+          //    }
+          //}, false);
+      //} else {
           try {
               alert('Device is ready! Make sure you set your app_id below this alert.');
-              FB.init({ appId: "343925279040057", nativeInterface: CDV.FB, useCachedDialogs: false });
+              FB.init({ appId: "343925279040057", useCachedDialogs: false });
               document.getElementById('data').innerHTML = "";
           } catch (e) {
               alert(e);
           }
-      }
+      //}
 
 
 

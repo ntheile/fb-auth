@@ -6,11 +6,11 @@
 //////////////////////////
 
 if (window.location.host == 'fbauth.apphb.com' || window.location.host == 'www.fbauth.apphb.com') {
-    var gAppID = '321109034670289';
+    var gAppID = '343925279040057';
 }
 //Add your Application ID here
 else {
-    var gAppID = '321109034670289';
+    var gAppID = '343925279040057';
 }
 
 if (gAppID == 'enter_your_appid_here') {
