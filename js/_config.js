@@ -13,9 +13,6 @@ else {
     var gAppID = '343925279040057';
 }
 
-if (gAppID == 'enter_your_appid_here') {
-  alert('You need to enter your App ID in js/_config.js on line 13.');
-}
 
 //Initialize the Facebook SDK
 //See https://developers.facebook.com/docs/reference/javascript/
