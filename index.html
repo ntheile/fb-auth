@@ -309,6 +309,9 @@
       if (navigator.userAgent.indexOf("Android") != -1) {  //Android
           document.write("<script src='facebook_js_sdk.js'></sc" + "ript>");
       }
+      else { //web
+          document.write("<script src='connect.facebook.net/en_US/all.js'></sc" + "ript>");
+      }
   </script>
 
   <script src="js/ui.js"></script>
@@ -353,19 +356,20 @@
                       oauth: true
                   });
 
+                  FB.getLoginStatus(handleStatusChange);
+
                   authUser();
-                  //checkForCredits();
                   updateAuthElements();
               };
 
-              // Load the SDK Asynchronously
-              (function (d) {
-                  var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-                  if (d.getElementById(id)) { return; }
-                  js = d.createElement('script'); js.id = id; js.async = true;
-                  js.src = "//connect.facebook.net/en_US/all.js";
-                  ref.parentNode.insertBefore(js, ref);
-              }(document));
+              //// Load the SDK Asynchronously
+              //(function (d) {
+              //    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+              //    if (d.getElementById(id)) { return; }
+              //    js = d.createElement('script'); js.id = id; js.async = true;
+              //    js.src = "//connect.facebook.net/en_US/all.js";
+              //    ref.parentNode.insertBefore(js, ref);
+              //}(document));
 
           } catch (e) {
               alert(e);
