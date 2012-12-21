@@ -306,9 +306,18 @@
   <!-- cordova facebook plugin -->
   <script src="cdv-plugin-fb-connect.js"></script>
   <!-- facebook js sdk -->
-  <script src="facebook_js_sdk.js"></script>
-  
+  <!--<script src="facebook_js_sdk.js"></script>-->
+  <script>
+      if (navigator.userAgent.indexOf("Android") != -1) {  //Android
+          document.write("<script src='facebook_js_sdk.js'></sc" + "ript>");
+      }
+      else { //web
+          document.write("<script src='js/_config.js'></sc" + "ript>");
+      }
+  </script>
   <!--<script src="js/_config.js"></script>-->
+
+
   <script src="js/ui.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/feed.js"></script>
@@ -318,7 +327,7 @@
   
   <script>
       // Initialize the Facebook SDK
-
+      
       if (navigator.userAgent.indexOf("Android") != -1) { //Android
 
           document.addEventListener('deviceready', function () {
@@ -335,23 +344,23 @@
           });
       }
       else {   //Web 
-          try {
-              alert('Web Ready');
+          //try {
+          //    alert('Web Ready');
 
-              $.getScript("js/_config.js")
-                  .done(function (script, textStatus) {
-                      alert(textStatus);
-                      //event fired when fb sdk is ready
-                      //FB.init({ appId: "343925279040057", useCachedDialogs: false });
-                      document.getElementById('data').innerHTML = "";
+          //    $.getScript("js/_config.js")
+          //        .done(function (script, textStatus) {
+          //            alert(textStatus);
+          //            //event fired when fb sdk is ready
+          //            //FB.init({ appId: "343925279040057", useCachedDialogs: false });
+          //            document.getElementById('data').innerHTML = "";
 
-                  })
-                .fail(function (jqxhr, settings, exception) {
-                    alert(exception);
-                });
-          } catch (e) {
-              alert(e);
-          }
+          //        })
+          //      .fail(function (jqxhr, settings, exception) {
+          //          alert(exception);
+          //      });
+          //} catch (e) {
+          //    alert(e);
+          //}
       }
 
 

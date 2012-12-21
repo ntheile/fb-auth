@@ -8,8 +8,7 @@
 if (window.location.host == 'fbauth.apphb.com' || window.location.host == 'www.fbauth.apphb.com') {
     var gAppID = '343925279040057';
 }
-//Add your Application ID here
-else {
+else { //Add your Application ID here
     var gAppID = '343925279040057';
 }
 
