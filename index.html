@@ -387,11 +387,11 @@
           try {
               alert('Web Ready');
 
-              $.getScript("//connect.facebook.net/en_US/all.js")
+              $.getScript("_config.js")
                   .done(function(script, textStatus) {
                       alert(textStatus);
                       //event fired when fb sdk is ready
-                      FB.init({ appId: "343925279040057", useCachedDialogs: false });
+                      //FB.init({ appId: "343925279040057", useCachedDialogs: false });
                       document.getElementById('data').innerHTML = "";
 
                   })
